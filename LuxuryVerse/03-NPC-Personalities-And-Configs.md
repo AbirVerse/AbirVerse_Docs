@@ -59,10 +59,24 @@ return Concierge
 
 ## 2. Interaction Modes: `UseGUI` vs. `UseChat`
 
-| Interaction Mode | Best For | Description |
-| :--- | :--- | :--- |
-| **`UseGUI`** | Storyline NPCs, Bartenders, Concierges | Opens a luxury frosted modal with chat history, dynamic QuickChips, animated avatar preview, and custom styling. |
-| **`UseChat`** | Casual stylists, ambient staff | Uses Roblox's overhead chat bubble system. The NPC approaches the player and speaks overhead while allowing player mobility. |
+Each NPC can be configured with one of two distinct interaction models via `InteractionMode` in their config file:
+
+### 1. `UseGUI` (Modal & Clickable Options)
+- **When to Use**: Best when you want to guide players with pre-set options, menus, and clickable chips rather than forcing them to type everything manually.
+- **How It Works**: Opens a luxury frosted dialogue modal on the player's screen.
+- **Key Advantages**:
+  - **Clickable QuickChips**: Players can simply tap predefined options—such as ordering specific drinks from Marco (*"Velvet Stardust"*, *"Golden Eclipse"*) or asking about hotel amenities—with a single click.
+  - **Console & Mobile Friendly**: Perfect for mobile, tablet, and gamepad players where typing long sentences in chat is slow or tedious.
+  - **Full History**: Preserves the dialogue scrollback and shows real-time typing indicators.
+
+### 2. `UseChat` (Direct In-World Spatial Chat)
+- **When to Use**: Best when you want a realistic, seamless, and immersive experience that feels like walking up and chatting directly with a real person or friend.
+- **How It Works**: Uses Roblox's native overhead chat bubble system without opening any screen-blocking UI.
+- **Key Advantages**:
+  - **Full Player Mobility**: Players can converse while walking around, exploring the lounge, or sitting on furniture.
+  - **Immersive Presence**: The NPC turns to face the player, approaches naturally, and speaks in speech bubbles directly above their head in 3D world space.
+  - **Casual & Ambient**: Ideal for roaming stylists, concierge greeters, and ambient venue staff.
+
 
 ---
 
